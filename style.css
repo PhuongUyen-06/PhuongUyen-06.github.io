@@ -1,0 +1,366 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.ocean {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    height: 50vh;
+    overflow: hidden;
+    background-image: url('background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.fish {
+    left: 90px; top: 400px;
+    position: absolute;
+    width: 80px; 
+    height: auto; 
+    animation: swim3 33s linear infinite; 
+    animation-play-state: running;
+}
+.fish1 {
+    left: 100px; top: 400px;
+    position: absolute;
+    width: 90px; 
+    height: auto; 
+    animation: swim1 38s linear infinite;
+    animation-play-state: running;
+}
+.turtle {
+    left: 100px; top: 400px;
+    position: absolute;
+    width: 90px; 
+    height: auto; 
+    animation: swim2 30s linear infinite;
+    animation-play-state: running;
+}
+.fish2 {
+    left: 100px; top: 400px;
+    position: absolute;
+    width: 90px; 
+    height: auto; 
+    animation: swim1 25s linear infinite;
+    animation-play-state: running;
+}
+.fish3 {
+    left: 100px; top: 400px;
+    position: absolute;
+    width: 90px; 
+    height: auto; 
+    animation: swim4 46s linear infinite; 
+    animation-play-state: running;
+}
+.fish4 {
+    left: 100px; top: 400px;
+    position: absolute;
+    width: 80px; 
+    height: auto; 
+    animation: swim5 27s linear infinite; 
+    animation-play-state: running;
+}
+.fish5 {
+    left: 100px; top: 400px;
+    position: absolute;
+    width: 80px; 
+    height: auto; 
+    animation: swim6 32s linear infinite; 
+    animation-play-state: running;
+}
+.fish6 {
+    left: 100px; top: 400px;
+    position: absolute;
+    width: 80px;
+    height: auto; 
+    animation: swim7 41s linear infinite; 
+    animation-play-state: running;
+}
+
+/* Bong bóng */
+
+.bubble {
+    position: absolute;
+    border-radius: 60%;
+    opacity: 0.8;
+    width: 30px;  
+    height: 30px; 
+    animation: floatBubble4 16s infinite;
+    pointer-events: none; 
+}
+
+.bubble1 {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.8;
+    width: 30px;  
+    height: 30px; 
+    animation: floatBubble 10s infinite;
+    pointer-events: none; 
+}
+
+.bubble2 {
+    position: absolute;
+    border-radius: 40%;
+    opacity: 0.8;
+    width: 20px;  
+    height: 20px; 
+    animation: floatBubble1 12s infinite;
+    pointer-events: none; 
+}
+.bubble3 {
+    position: absolute;
+    border-radius: 30%;
+    opacity: 0.8;
+    width: 25px;  
+    height: 25px; 
+    animation: floatBubble2 13s infinite;
+    pointer-events: none; 
+}
+
+.bubble4 {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.8;
+    width: 40px;  
+    height: 40px; 
+    animation: floatBubble3 15s infinite;
+    pointer-events: none; 
+}
+
+
+@keyframes floatBubble {
+    0% {
+        left: calc(50% + random(200px)); 
+        bottom: 0;
+        transform: scale(0.5);  
+        opacity: 0.8;
+    }
+    100% {
+        left: calc(50% + random(200px)); 
+        bottom: 100%;
+        transform: scale(1);  
+        opacity: 0;
+    }
+}
+
+@keyframes floatBubble1 {
+    0% {
+        left: calc(60% + random(210px)); 
+        bottom: 0;
+        transform: scale(0.5);  
+        opacity: 0.8;
+    }
+    100% {
+        left: calc(60% + random(210px)); 
+        bottom: 100%;
+        transform: scale(1);  
+        opacity: 0;
+    }
+}
+
+@keyframes floatBubble2 {
+    0% {
+        left: calc(70% + random(250px)); 
+        bottom: 0;
+        transform: scale(0.5);  
+        opacity: 0.8;
+    }
+    100% {
+        left: calc(70% + random(250px)); 
+        bottom: 100%;
+        transform: scale(1);  
+        opacity: 0;
+    }
+}
+
+@keyframes floatBubble3 {
+    0% {
+        left: calc(80% + random(280px)); 
+        bottom: 0;
+        transform: scale(0.5);  
+        opacity: 0.8;
+    }
+    100% {
+        left: calc(80% + random(280px)); 
+        bottom: 100%;
+        transform: scale(1);  
+        opacity: 0;
+    }
+}
+
+@keyframes floatBubble4 {
+    0% {
+        left: calc(90% + random(300px)); 
+        bottom: 0;
+        transform: scale(0.5);  
+        opacity: 0.8;
+    }
+    100% {
+        left: calc(90% + random(300px)); 
+        bottom: 100%;
+        transform: scale(1);  
+        opacity: 0;
+    }
+}
+
+
+@keyframes swim1 {
+    0% {
+        left: -50px; 
+        transform: scaleX(1); 
+        top: 20%;
+    }
+    49.9% {
+        left: 100%; 
+        transform: scaleX(1); 
+        top: 40%;
+    }
+    50% {
+        left: 100%; 
+        transform: scaleX(-1); 
+    }
+    100% {
+        left: -50px; 
+        transform: scaleX(-1); 
+        top: 20%;
+    }
+}
+
+@keyframes swim2 {
+    0% {
+        left: -60px; 
+        transform: scaleX(1); 
+        top: 90%; 
+    }
+    49.9% {
+        left: 100%; 
+        transform: scaleX(1); 
+        top: 85%; 
+    }
+    50% {
+        left: 100%; 
+        transform: scaleX(-1); 
+    }
+    100% {
+        left: -60px; 
+        transform: scaleX(-1); 
+        top: 80%; 
+    }
+}
+
+@keyframes swim3 {
+    0% {
+        left: -60px; 
+        transform: scaleX(1); 
+        top: 70%;
+    }
+    49.9% {
+        left: 100%; 
+        transform: scaleX(1); 
+        top: 55%;
+    }
+    50% {
+        left: 100%; 
+        transform: scaleX(-1); 
+    }
+    100% {
+        left: -60px; 
+        transform: scaleX(-1); 
+        top: 70%;
+    }
+}
+
+@keyframes swim4 {
+    0% {
+        left: -60px; 
+        transform: scaleX(1); 
+        top: 60%;
+    }
+    49.9% {
+        left: 100%; 
+        transform: scaleX(1); 
+        top: 70%;
+    }
+    50% {
+        left: 100%; 
+        transform: scaleX(-1); 
+    }
+    100% {
+        left: -60px; 
+        transform: scaleX(-1); 
+        top: 60%;
+    }
+}
+
+@keyframes swim5 {
+    0% {
+        left: -60px; 
+        transform: scaleX(1); 
+        top: 10%;
+    }
+    49.9% {
+        left: 100%; 
+        transform: scaleX(1); 
+        top: 25%;
+    }
+    50% {
+        left: 100%; 
+        transform: scaleX(-1); 
+    }
+    100% {
+        left: -60px; 
+        transform: scaleX(-1); 
+        top: 30%;
+    }
+}
+
+@keyframes swim6 {
+    0% {
+        left: -60px; 
+        transform: scaleX(1); 
+        top: 70%;
+    }
+    49.9% {
+        left: 100%; 
+        transform: scaleX(1); 
+        top: 90%;
+    }
+    50% {
+        left: 100%; 
+        transform: scaleX(-1); 
+    }
+    100% {
+        left: -60px; 
+        transform: scaleX(-1); 
+        top: 60%;
+    }
+}
+
+@keyframes swim7 {
+    0% {
+        left: -60px; 
+        transform: scaleX(1); 
+        top: 67%;
+    }
+    49.9% {
+        left: 100%; 
+        transform: scaleX(1); 
+        top: 70%;
+    }
+    50% {
+        left: 100%; 
+        transform: scaleX(-1); 
+    }
+    100% {
+        left: -60px; 
+        transform: scaleX(-1); 
+        top: 55%;
+    }
+}
